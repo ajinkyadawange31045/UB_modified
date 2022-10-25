@@ -1,0 +1,31 @@
+{%extends 'base.html' %} {%block title%} Categories {%endblock%} {%block content%}
+<br><br><br><br>
+<div class="wow fadeIn">
+    <h2 class="text-center h1 my-4">{{cat.title}}</h2>
+    <p class="px-5 mb-5 pb-3 lead blue-grey-text text-center">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ex id similique possimus cumque. Quidem nihil quia veritatis, iusto, voluptates perferendis sint quasi recusandae dolores officiis cupiditate iure, dignissimos fugiat?
+    </p>
+</div>
+<div class="container">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        {% for p in posts %}
+        <div class="col my-5">
+            <div class="card h-100">
+                <img src="/media/{{p.image}}" class="card-img-top w-20" alt="Images" />
+                <div class="card-body">
+                    <h5 class="card-title">{{p.title}}</h5>
+                    <p class="card-text">
+                        {{p.description|truncatewords:30}}
+                    </p>
+                </div>
+                <!-- <a class="btn btn-primary btn-rounded my-3 px-10" href="/blog/{{cat.url}}" target="_blank">Read More..</a> -->
+
+                <a class="text-align:center;" href="/blog/{{p.url}}"><button type="button" class="btn btn-primary mb-10">Read More..</button></a>
+            </div>
+        </div>{% empty %}
+        <h5 class="card-title">No posts in this category</h5>
+        {%endfor%}
+
+    </div>
+</div>
+{%endblock%}
