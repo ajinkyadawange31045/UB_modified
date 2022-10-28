@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-from blog.models import Post, Category
+from blog.models import Post, Category, Team
 
 
 # Create your views here.
@@ -9,9 +9,11 @@ def home(request):
     posts = Post.objects.all()[:11]
     # print(posts)
     cats = Category.objects.all()
+    teams = Team.objects.all()
     data = {
         'posts': posts,
-        'cats': cats
+        'cats': cats,
+        'teams':teams,
     }
     return render(request, "home.html", data)
 

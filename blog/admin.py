@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Category, Post
+from .models import Category, Post, Team
 
 
 # Register your models here.
@@ -19,6 +19,10 @@ class PostAdmin(admin.ModelAdmin):
     class Media:
         js = ('https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js', 'js/script.js',)
 
+class TeamAdmin(admin.ModelAdmin):
+    list_display = ('name', 'work', 'quote', 'twitter_handle','twitter_link','image')
+    search_fields = ('name',)
 
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Post, PostAdmin)
+admin.site.register(Team,TeamAdmin)

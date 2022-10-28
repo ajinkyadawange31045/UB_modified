@@ -35,3 +35,14 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+class Team(models.Model):
+    team_id = models.AutoField(primary_key=True)
+    name = models.CharField(max_length=20)
+    work = models.CharField(max_length=20)
+    quote = models.CharField(max_length=40)
+    twitter_handle = models.CharField(max_length=120)
+    twitter_link = models.CharField(max_length=120)
+    image = models.ImageField(upload_to='team/')
+    def __str__(self):
+        return self.name
