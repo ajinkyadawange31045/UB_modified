@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Category, Post, Team
+from .models import Category, Post, Team, Value
 
 
 # Register your models here.
@@ -23,6 +23,11 @@ class TeamAdmin(admin.ModelAdmin):
     list_display = ('name', 'work', 'quote', 'twitter_handle','twitter_link','image')
     search_fields = ('name',)
 
+class ValueAdmin(admin.ModelAdmin):
+    list_display = ('name', 'quote','image')
+    search_fields = ('name',)
+
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Post, PostAdmin)
 admin.site.register(Team,TeamAdmin)
+admin.site.register(Value,ValueAdmin)

@@ -46,3 +46,11 @@ class Team(models.Model):
     image = models.ImageField(upload_to='team/')
     def __str__(self):
         return self.name
+
+class Value(models.Model):
+    value_id = models.AutoField(primary_key=True)
+    name = models.CharField(max_length=20)
+    quote = models.TextField(max_length=1000)
+    image = models.ImageField(upload_to='value/')
+    def __str__(self):
+        return self.name
