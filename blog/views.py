@@ -28,9 +28,14 @@ def home(request):
 
 def post(request, url):
     post = Post.objects.get(url=url)
+    post1 = Post.objects.all()
+    posts = post1[::-1][:4]
+    # posts.reverse()
+    # posts
+    print(posts)
     cats = Category.objects.all()
     # print(post)
-    return render(request, 'posts.html', {'post': post, 'cats': cats})
+    return render(request, 'posts.html', {'post': post, 'cats': cats,'posts':posts})
 
 def category(request, url):
     cat = Category.objects.get(url=url)

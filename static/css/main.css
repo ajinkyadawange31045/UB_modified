@@ -58,3 +58,52 @@ html {
 #pricing ul li {
     font-size: 1.1em;
 }
+
+
+/* for scroller to top */
+
+#btn-back-to-top {
+    position: fixed;
+    bottom: 10px;
+    background-color: black;
+    background: transparent;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    right: 10px;
+    /* display: none; */
+    /* height: 10px; */
+    /* width: 10px; */
+    /* padding: 1px; */
+    /* width: 74px; */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 27%;
+    display: none;
+    display: inline-block;
+    padding: revert;
+}
+
+@media (max-width: 1000px) {
+    #btn-back-to-top {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        border-radius: 27%;
+        display: none;
+        display: inline-block;
+        padding: revert;
+    }
+}
+
+@media (max-width: 450px) {
+    #btn-back-to-top {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        display: none;
+    }
+}

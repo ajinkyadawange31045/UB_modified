@@ -217,6 +217,143 @@
                         </div>
                     </section>
                     <!--Section: Video-->
+                    <style>
+                        @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900,400italic);
+                        /*------------------------------------ 
+Baseline Grid: 1.5rem 
+Modular Scale: 1:1.33 Perfect Fourth
+--------------------------------------*/
+                        
+                        h1 {
+                            font: 900 1.77rem/3rem 'Source Sans Pro';
+                        }
+                        
+                        h2 {
+                            font: 900 1.33rem/1.5rem 'Source Sans Pro';
+                        }
+                        
+                        h2 a {
+                            color: inherit;
+                            text-decoration: none;
+                        }
+                        
+                        p {
+                            font: 400 1rem/1.5rem 'Source Sans Pro';
+                        }
+                        
+                        p a {
+                            color: #3b89c9;
+                            font-style: italic;
+                            text-decoration: none;
+                        }
+                        
+                        time {
+                            font-size: 0.75rem;
+                        }
+                        
+                        hr {
+                            border: none;
+                        }
+                        
+                        .recent_posts {
+                            background: #fff;
+                            margin: 0 auto;
+                            padding: 1rem;
+                            position: relative;
+                            top: 1.5rem;
+                            width: 80%;
+                        }
+                        
+                        .recent_posts article {
+                            background: none;
+                            border-radius: 5px;
+                            padding: 0.5rem;
+                        }
+                        
+                        .recent_posts header h2,
+                        .recent_posts p a {
+                            color: #3b89c9;
+                        }
+                        
+                        .recent_posts hr {
+                            background: #dfe2e7;
+                            height: 1px;
+                            width: 100%;
+                        }
+                        
+                        .recent_posts time {
+                            display: block;
+                        }
+                        
+                        .recent_posts header h2 a:active,
+                        .recent_posts p a:active {
+                            color: #ffde16;
+                        }
+                        
+                        @media all and (min-width: 400px) {
+                            .recent_posts {
+                                min-width: 20rem;
+                                width: 66%;
+                            }
+                            .recent_posts time {
+                                display: inline;
+                            }
+                            .recent_posts article {
+                                transition: all .3s ease-in-out;
+                                z-index: 1;
+                            }
+                            .recent_posts header h2 a,
+                            .recent_posts p a {
+                                transition: all .3s ease-in-out;
+                            }
+                            .recent_posts time:before {
+                                content: "|";
+                                font-size: 1rem;
+                                margin: 0 3px;
+                            }
+                            .recent_posts article:hover {
+                                color: rgb(0, 0, 0);
+                                background: #4173e6;
+                            }
+                            .recent_posts article:hover>header h2,
+                            .recent_posts article:hover>p a {
+                                color: #f9f9f9;
+                            }
+                            .recent_posts header h2 a:hover,
+                            .recent_posts article p a:hover {
+                                color: #ffde16;
+                                z-index: 2;
+                            }
+                        }
+                        
+                        @media all and (min-width: 600px) {
+                            .recent_posts {
+                                max-width: 40rem;
+                                min-width: 24.75rem;
+                                width: 33%;
+                            }
+                        }
+                    </style>
+
+                    <section class="recent_posts">
+                        <header>
+                            <h1>Latest Posts</h1>
+                        </header>
+                        <hr /> {% for p in posts %}
+                        <article>
+                            <header>
+                                <h2> <a href="/blog/{{p.url}}">{{p.title}}</a></h2>
+                            </header>
+                            <p>
+                                <span>by</span>
+                                <a href="#" class="author">Author</a>
+                                <time datetime="" pubdate>Day Month Year, Time</time>
+                            </p>
+                        </article>
+                        <hr /> {% endfor %}
+
+                    </section>
+                    <!-- .Container ends here -->
                 </section>
                 <!--Section: Sidebar-->
             </div>
