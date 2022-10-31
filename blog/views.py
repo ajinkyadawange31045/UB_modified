@@ -61,7 +61,6 @@ def user_login(request):
                 if user is not None:
                     login(request,user)
                     messages.success(request,'Logged in Successfully')
-                    return HttpResponsePermanentRedirect('/')
         else:
             form = LoginForm()
         return render(request,'login.html',{'form':form})
