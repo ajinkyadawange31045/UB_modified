@@ -58,20 +58,19 @@
         <!--Grid row-->
         <div class="row">
             <!--Grid column-->
-            <div class="col-md-8 mb-4">
+            <div class="col-md-9 mb-4">
                 <!--Section: Post data-mdb-->
-                <!-- <section class="border-bottom mb-4">
+                <section class="border-bottom mb-4">
                     <img src="" class="img-fluid shadow-2-strong rounded-5 mb-4" alt="" />
 
                     <div class="row align-items-center mb-4">
                         <div class="col-lg-6 text-center text-lg-start mb-3 m-lg-0">
-                            <img src=""
-                                class="rounded-5 shadow-1-strong me-2" height="35" alt="" loading="lazy" />
+                            <img src="" class="rounded-5 shadow-1-strong me-2" height="35" alt="" loading="lazy" />
                             <span> Published <u>15.07.2020</u> by</span>
                             <a href="" class="text-dark">Anna</a>
                         </div>
 
-                        <div class="col-lg-6 text-center text-lg-end">
+                        <!-- <div class="col-lg-6 text-center text-lg-end">
                             <button type="button" class="btn btn-primary px-3 me-1" style="background-color: #3b5998;">
                                 <i class="fab fa-facebook-f"></i>
                             </button>
@@ -84,15 +83,15 @@
                             <button type="button" class="btn btn-primary px-3 me-1">
                                 <i class="fas fa-comments"></i>
                             </button>
-                        </div>
+                        </div> -->
                     </div>
-                </section> -->
+                </section>
 
                 <!--Section: Post data-mdb-->
 
                 <!--Section: Text-->
                 <section>
-                    <p class="text:space-around;">
+                    <p class="text-justify">
                         {{post.content|safe}}
                     </p>
                     <!--Section: Share buttons-->
@@ -110,6 +109,20 @@
                         <!-- <button type="button" class="btn btn-primary me-1">
                             <i class="fas fa-comments me-2"></i>Add comment
                         </button> -->
+                        <div class="small d-flex justify-content-center">
+                            <a href="#!" class="d-flex align-items-center me-3 pl-3">
+                                <i class="far fa-thumbs-up me-2"></i>
+                                <p class="mb-0 pl-2">Like</p>
+                            </a>
+                            <a href="#!" class="d-flex align-items-center me-3 pl-3">
+                                <i class="far fa-comment-dots me-2"></i>
+                                <p class="mb-0 pl-2">Comment</p>
+                            </a>
+                            <a href="#!" class="d-flex align-items-center me-3 pl-3">
+                                <i class="fas fa-share me-2"></i>
+                                <p class="mb-0 pl-2">Share</p>
+                            </a>
+                        </div>
                     </section>
                     <!--Section: Share buttons-->
 
@@ -132,7 +145,9 @@
                         </div>
 
                     </section>
-                    <!--Section: Author-->
+
+                    <!-- comment section included -->
+                    {% include 'comments.html' %}
 
                     <!--Section: Comments-->
                     <!-- <section class="border-bottom mb-3">
@@ -188,7 +203,7 @@
             <!--Grid column-->
 
             <!--Grid column-->
-            <div class="col-md-4 mb-4 border-1">
+            <div class="col-md-3 mb-4 border-1">
                 <!--Section: Sidebar-->
                 <section class="sticky-top" style="top: 80px;">
                     <!--Section: Ad-->

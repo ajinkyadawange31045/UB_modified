@@ -33,7 +33,7 @@
           backdrop-filter: blur(30px);">
         <div class="card-body py-5 px-md-5">
             <div class="row d-flex justify-content-center">
-                <div class="col-lg-8">
+                <div class="col-lg-6">
                     <h2 class="fw-bold mb-5">Sign up now</h2>
                     {% if messages %} {% for message in messages %}
                     <p if {% if message.tags %} class="alert alert-{{message.tags}} mb-5" {% endif %}>{{message}}</p>
@@ -49,7 +49,7 @@
                         {% endfor %}
 
                         <!-- Checkbox -->
-                        <div class="form-check d-flex justify-content-center mb-4">
+                        <div class="form-check d-flex justify-content-align mb-4">
                             <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
                             <label class="form-check-label" for="form2Example33">
                                  Subscribe to our newsletter
@@ -57,9 +57,7 @@
                         </div>
 
                         <!-- Submit button -->
-                        <button type="submit" value="Sign Up" class="btn btn-primary btn-block mb-4">
-                        Sign up
-                        </button>{% if form.non_field_errors %} {% for error in form.non_field_errors %}
+                        <button type="submit" class="btn btn-dark btn-rounded" data-mdb-ripple-color="dark" value="sign up">SignUp</button> {% if form.non_field_errors %} {% for error in form.non_field_errors %}
                         <p class="alert alert-danger my-3">{{error}}</p>
                         {% endfor %} {% endif %}
 

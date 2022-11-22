@@ -1,19 +1,3 @@
-<!-- <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar" id="navbar">
-    <div class="container"><a class="navbar-brand" href="/"><strong>Utkrishta Bharath</strong></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-        <div class="collapse navbar-collapse" id="navbarContent">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-link active" href="/category/about">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="/#initiatives">Initiatives</a></li>
-                <li class="nav-item"><a class="nav-link" href="/#categories">Categories</a></li>
-                <li class="nav-item"><a class="nav-link" href="/#team">Team</a></li>
-                <li class="nav-item"><a class="nav-link" href="/#contact">Contact</a></li> -->
-<!-- </ul><a class="btn btn-primary btn-rounded p-2 my-0" href="" target="_blank">Login</a>
-            <a class="btn btn-primary btn-rounded p-2 my-0" href="" target="_blank">SignUp</a> -->
-<!-- </div>
-    </div>
-</nav> -->
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
     .topnavARD {
@@ -80,7 +64,7 @@
     <a href="/#categories" class="mt-2 ml-2">Categories</a>
     <a href="/#team" class="mt-2 ml-2">Team</a>
     <a href="/#contact" class="mt-2 ml-2">Contact</a> {% if request.user.is_authenticated %}
-    <a href="/logout" class="mt-2 ml-2">logout</a> {% else %}
+    <a href="/logout" class="mt-2 ml-2 align-item:left">logout</a> {% else %}
     <a href="/login" class="active align-content-center mt-2 ml-2">Login</a>
     <a href="/signup" class="active ml-2 mt-2">SignUp</a> {% endif %}
     <a href="javascript:void(0);" class="iconARD" onclick="myFunctionARD()">
